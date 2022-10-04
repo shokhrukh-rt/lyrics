@@ -9,7 +9,7 @@ const TopCharts = () => {
 
 	const { data, isFetching, error } = useGetTopChartsQuery();
 
-	if (isFetching) return <Loader title="Loading top charts" />;
+	if (isFetching) return <Loader title="Loading Top Charts" />;
 
 	if (error && country) return <Error />;
 

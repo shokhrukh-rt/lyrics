@@ -23,7 +23,7 @@ const CountryTracks = () => {
 	const { data, isFetching, error } = useGetSongsByCountryQuery(country);
 
 	if (isFetching && loading)
-		return <Loader title="Loading songs around you" />;
+		return <Loader title="Loading Songs Around You" />;
 
 	if (error && country) return <Error />;
 
