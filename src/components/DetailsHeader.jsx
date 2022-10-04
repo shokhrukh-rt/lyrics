@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const DetailsHeader = ({ artistId, artistData, songData }) => {
 	const artist = artistData?.artists[artistId]?.attributes;
+
 	return (
 		<div className="relative w-full flex flex-col">
 			<div
@@ -16,8 +17,8 @@ const DetailsHeader = ({ artistId, artistData, songData }) => {
 					src={
 						artistId
 							? artist?.artwork?.url
-									.replace("{W}", "500")
-									.replace("h", "500")
+									.replace("{w}", "500")
+									.replace("{h}", "500")
 							: songData?.images?.coverart
 					}
 					className="sm:w-48 w-28 sm:h-48 h-28 rounded-full
@@ -37,7 +38,9 @@ const DetailsHeader = ({ artistId, artistData, songData }) => {
 						</Link>
 					)}
 					<p className="text-base text-gray-400 mt-2">
-						{artistId? artist?.genreNames[0]:songData?.genres?.primary }
+						{artistId
+							? artist?.genreNames[0]
+							: songData?.genres?.primary}
 					</p>
 				</div>
 			</div>
