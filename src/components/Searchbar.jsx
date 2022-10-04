@@ -30,7 +30,7 @@ const Searchbar = () => {
           placeholder="Search"
           type="search"
           value={searchTerm}
-          onChange={() => {
+          onChange={(e) => {
             setSearchTerm(e.target.value);
           }}
           className="flex-1 bg-transparent border-none outline-none
